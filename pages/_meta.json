@@ -1,0 +1,10 @@
+{
+  "index": "Introduction",
+  "go": "Golang",
+  "contact": {
+    "title": "Main Website",
+    "type": "page",
+    "href": "https://tifan.me",
+    "newWindow": true
+  }
+}

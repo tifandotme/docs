@@ -1,0 +1,39 @@
+// https://github.com/tsconfig/bases/blob/main/bases/next.json
+{
+  "compilerOptions": {
+    "target": "es6",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "module": "esnext",
+    "jsx": "preserve",
+    "noEmit": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "incremental": true,
+    "skipLibCheck": true,
+    "isolatedModules": true,
+    "allowJs": true,
+    "checkJs": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "allowUnusedLabels": false,
+    "allowUnreachableCode": false,
+    "noUncheckedIndexedAccess": true // will add undefined to index signatures (kinda strict)
+    // "plugins": [
+    //   {
+    //     "name": "next"
+    //   }
+    // ],
+    // "baseUrl": ".", // needed by contentlayer
+    // "paths": {
+    //   "@/*": ["./src/*"],
+    //   "contentlayer/generated": ["./.contentlayer/generated"]
+    // }
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules"]
+}
