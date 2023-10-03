@@ -1,4 +1,3 @@
-// https://github.com/tsconfig/bases/blob/main/bases/next.json
 {
   "compilerOptions": {
     "target": "es6",
