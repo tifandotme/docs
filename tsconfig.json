@@ -21,17 +21,17 @@
     "noFallthroughCasesInSwitch": true,
     "allowUnusedLabels": false,
     "allowUnreachableCode": false,
-    "noUncheckedIndexedAccess": true // will add undefined to index signatures (kinda strict)
+    "noUncheckedIndexedAccess": true,
     // "plugins": [
     //   {
     //     "name": "next"
     //   }
     // ],
     // "baseUrl": ".", // needed by contentlayer
-    // "paths": {
-    //   "@/*": ["./src/*"],
-    //   "contentlayer/generated": ["./.contentlayer/generated"]
-    // }
+    "paths": {
+      "config/*": ["./config/*"],
+      "components/*": ["./components/*"]
+    }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
