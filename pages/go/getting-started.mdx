@@ -1,0 +1,62 @@
+import { Steps } from "nextra/components"
+
+# Getting Started
+
+## Setting Up Go Environment
+
+On a clean system, we first need to check these two:
+
+1. `go` command is available. Try running `go verison`.
+2. `$PATH` contain `$GOPATH/bin` so that we can run Go programs installed from `go install`
+
+There is a popular version manager called [GVM](https://github.com/moovweb/gvm). It works like [NVM](https://github.com/nvm-sh/nvm) for Node. But, we first needs the `go` command to be present before installing any Go version with GVM.
+
+<Steps>
+### Install Go Development Tools
+
+```bash
+# Ubuntu
+sudo apt install golang-go
+
+# Fedora
+sudo dnf install golang
+```
+
+### Install GVM (optional)
+
+Plese [refer to this](https://github.com/moovweb/gvm#installing) for complete instructions.
+
+### Install latest version of Go with GVM (optional)
+
+Check current up-to-date version from go.dev, then run:
+
+```bash
+gvm install go1.21.1 # download version 1.21.1 (example)
+```
+
+To use the version, run:
+
+```bash
+gvm use go1.21.1
+```
+
+> The benefit of GVM is that so we can install the latest Go version. Because often times popular package manager like `apt` doesn't provide the most up to date version.
+
+### Configure $PATH
+
+Add to `.profile` or `.bash_profile`:
+
+```bash
+export GOPATH="$HOME/.local/share/go"
+export PATH="$GOPATH/bin:$PATH"
+```
+
+> Check current PATH configuration with: `printenv PATH`
+
+</Steps>
+
+# Managing Packages
+
+Go doesn't have doesn't have centralized hosted service like NPM registry, instead it relies on source code repositories to share projects.
+
+`go install [github.com/rakyll/hey@latest](http://github.com/rakyll/hey@latest)`. This downloads hey and its dependencies, build, and installs the binary in $GOPATH/.bin

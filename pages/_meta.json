@@ -6,5 +6,9 @@
     "type": "page",
     "href": "https://tifan.me",
     "newWindow": true
+  },
+  "about": {
+    "title": "About",
+    "type": "page"
   }
 }
