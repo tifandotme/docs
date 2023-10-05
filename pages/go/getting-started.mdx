@@ -1,5 +1,7 @@
 import { Steps } from "nextra/components"
 
+import { Callout } from 'nextra/components'
+
 # Getting Started
 
 ## Setting Up Go Environment
@@ -55,8 +57,33 @@ export PATH="$GOPATH/bin:$PATH"
 
 </Steps>
 
-# Managing Packages
+## Running and Building
 
-Go doesn't have doesn't have centralized hosted service like NPM registry, instead it relies on source code repositories to share projects.
+There are two similar commands: `go run` and `go build`. The difference is:
 
-`go install [github.com/rakyll/hey@latest](http://github.com/rakyll/hey@latest)`. This downloads hey and its dependencies, build, and installs the binary in $GOPATH/.bin
+- go run compiles the code into a binary into a temporary directory, excecutes it, and then deletes the binary after the program finishes
+- go build compiles the source code into a binary
+
+Use -o flag to store in a different location:
+
+```bash
+go build -o custom_name hello.go
+```
+
+<Callout>
+Use `go run` to treat your source code as a script. Use `go build` to distribute your program for other people to use.
+</Callout>
+
+## Using Third Party Tools
+
+Some people choose to distribute their Go programs as pre-compiled binaries, but we can also built one from the source code direcly with `go install`. Go doesn't have have centralized hosted service like NPM registry, instead it relies on source code repositories to share projects.
+
+For example to install Go tools called __hey__ from github.com/rakyll/hey, we run:
+
+```bash
+go install github.com/rakyll/hey@latest
+```
+
+Include _@latest_ to use the latest version or any version of your choosing. Please note you have to have $GOPATH/bin already set up in PATH environment variable to be able to run the binary after installing it.
+
+If you have already installed a tool and want to update it to a newer version, rerun `go install` with the newer version specified or with _@latest_ (same as above)
