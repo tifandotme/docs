@@ -1,11 +1,49 @@
-# Introduction
- 
-Welcome to Nextra! This is a basic docs template. You can use it as a starting point for your own project :)
+import { Card, Cards } from "nextra/components"
+import { Docs, External } from "components/icons"
 
-## What is Nextra?
+<br />
 
-A **simple**, **powerful** and **flexible** site generation framework with everything you love from Next.js.
+# Welcome to my knowledge base
 
-## Documentation
+<Cards
+  style={{ gridTemplateColumns: "repeat(2,200px)", justifyContent: "center", margin: "4em auto 8rem" }}
+>
+  <Card
+    style={{
+      background:
+        "linear-gradient(310deg, rgba(0,16,25,1) 31%, rgba(9,22,29,1) 100%)",
+    }}
+    icon={<Docs />}
+    title="Read the Docs"
+    href="/go/getting-started"
 
-The documentation is available at [https://nextra.site](https://nextra.site).
+/>
+
+  <Card
+    icon={<External />}
+    title="Main Website"
+    href="https://tifan.me"
+    target="_blank"
+  />
+</Cards>
+
+---
+
+## Philosophy
+
+There are tons of sources to learn new topics from:
+
+- Documentations
+- Courses
+- Articles
+- YouTube
+
+Simply reading them passively isn't that effective for retaining the knowledge I have learned for long-term use. Often, I create a summary or recap so that I can refer back to my writings to refresh my memory without having to search for the information from scratch again.
+
+I've tried Notion and recently Obsidian, both tools are great, but I believe that when I make this information public and use a DIY platform, I'm more inclined to put more care into it. Additionally, other developers might also benefit from this, which is a nice feeling to know.
+
+## Guidelines
+
+- Every section is written to be succint, including only information that's worth paying attention to.
+- If it is better to read from the source material, I'll simply provide the link (e.g. installation instructions).
+- Not everything follows the industry best practices or common conventions. As a learn more, old information might not be ideal anymore. But I always tried to keep it updated.

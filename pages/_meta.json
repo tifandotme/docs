@@ -1,14 +1,29 @@
 {
-  "index": "Introduction",
-  "go": "Golang",
-  "contact": {
-    "title": "Main Website",
+  "index": {
+    "title": "Homepage",
     "type": "page",
-    "href": "https://tifan.me",
-    "newWindow": true
+    "display": "hidden",
+    "theme": {
+      "typesetting": "article",
+      "breadcrumb": false,
+      "sidebar": true,
+      "pagination": false,
+      "toc": false
+    }
   },
-  "about": {
-    "title": "About",
-    "type": "page"
+  "docs": {
+    "title": "Documentation",
+    "type": "page",
+    "href": "/go/getting-started"
+  },
+  "---": {
+    "type": "separator",
+    "title": "Programming Languages"
+  },
+  "go": "Golang",
+  "*": {
+    "theme": {
+      "footer": false
+    }
   }
 }
