@@ -1,18 +1,28 @@
-import React from "react"
 import { usePathname } from "next/navigation"
 import { DocsThemeConfig } from "nextra-theme-docs"
 import site from "config/site"
+import { Docs } from "components/icons"
 
 const config: DocsThemeConfig = {
-  logo: <span>Tifan's Personal Docs</span>,
+  logo: (
+    <span
+      style={{
+        fontWeight: "bold",
+        fontSize: "1.2rem",
+      }}
+    >
+      Tifan's Personal Docs
+    </span>
+  ),
   useNextSeoProps() {
     if (usePathname() !== "/") {
       return {
         titleTemplate: "%s - Tifan's Personal Docs",
       }
-    }
-    return {
-      title: "Tifan's Docs",
+    } else {
+      return {
+        title: "Tifan's Docs",
+      }
     }
   },
   head: () => {
@@ -20,19 +30,14 @@ const config: DocsThemeConfig = {
 
     return (
       <>
+        <link href="/dist/main.css" rel="stylesheet" />
         <meta property="og:url" content={url} />
         <meta property="og:title" content={site.name} />
         <meta property="og:description" content={site.description} />
       </>
     )
   },
-  project: {
-    link: "https://github.com/tifandotme/docs",
-  },
   docsRepositoryBase: "https://github.com/tifandotme/docs",
-  footer: {
-    text: "It's all yours.",
-  },
 }
 
 export default config
