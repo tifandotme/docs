@@ -29,7 +29,7 @@ const config: DocsThemeConfig = {
       </>
     )
   },
-  // docsRepositoryBase: "https://github.com/tifandotme/docs",
+  docsRepositoryBase: "https://github.com/tifandotme/docs",
 }
 
 export default config
