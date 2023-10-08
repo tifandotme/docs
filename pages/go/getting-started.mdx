@@ -1,6 +1,4 @@
-import { Steps } from "nextra/components"
-
-import { Callout } from "nextra/components"
+import { Callout, Steps } from "nextra/components"
 
 # Getting Started
 
@@ -8,21 +6,23 @@ import { Callout } from "nextra/components"
 
 Go programming language is made to allow developers to write code more efficiently. We can expect these points:
 
-- Go syntax is intentionally simple and boring .
+- Fast, statically typed, compiled language.
+- Simple and boring syntax (for good reason).
 - A fast compiler.
 - Less flexibility on how code is laid out, compared to TypeScript.
-- Tabs for indentation is enforced.
+- Tabs instead of spaces for indentation.
 
 ## Setting Up Go Environment
 
-On a clean system, we first need to check these two:
+On a clean system, you first need to check these two:
 
 1. `go` command is available. Try running `go verison`.
-2. `$PATH` contain `$GOPATH/bin` so that we can run Go programs installed from `go install`
+2. `$PATH` contain `$GOPATH/bin` so that you can run Go programs installed from `go install`
 
-There is a popular version manager called [GVM](https://github.com/moovweb/gvm). It works like [NVM](https://github.com/nvm-sh/nvm) for Node. But, we first needs the `go` command to be present before installing any Go version with GVM.
+There is a popular version manager called [GVM](https://github.com/moovweb/gvm). It works like [NVM](https://github.com/nvm-sh/nvm) for Node. But, you first needs the `go` command to be present before installing any Go version with GVM.
 
 <Steps>
+
 ### Install Go Devevelopment Tools
 
 ```bash
@@ -35,7 +35,7 @@ sudo dnf install golang
 
 ### Install GVM (optional)
 
-Plese [refer to this](https://github.com/moovweb/gvm#installing) for complete instructions.
+[Refer to this](https://github.com/moovweb/gvm#installing) for complete instructions.
 
 ### Install latest version of Go with GVM (optional)
 
@@ -86,7 +86,7 @@ go build -o custom_name hello.go
 
 ## Using Third Party Tools
 
-Some people choose to distribute their Go programs as pre-compiled binaries, but we can also built one from the source code directly with `go install`. Go doesn't have have centralized hosted service like NPM registry, instead it relies on source code repositories to share projects.
+Some people choose to distribute their Go programs as pre-compiled binaries, but you can also built one from the source code directly with `go install`. Go doesn't have have centralized hosted service like NPM registry, instead it relies on source code repositories to share projects.
 
 For example to install Go tools called **hey** from github.com/rakyll/hey, run:
 
@@ -115,12 +115,12 @@ goimports -l -w .
 
 ## Linting
 
-**Idiomatic** in programming refers to code that follows the estabilished conventions and style of the language and community. To ensure your code is idiomatic and high quality, we can:
+**Idiomatic Go** refers to Go code that follows the estabilished conventions and style of the language and community. To ensure your code is idiomatic and high quality, we can:
 
 - Use `go fmt` to format our code.
-- Enforce idiomatic style using `golint`
+- Enforce idiomatic style using `golint` (recommended)
 
-Don't always assume that `golint` is 100% accurate, the issues that it finds are somewhat fuzzy and somtimes has false positives and false negatives. This means you don't have to make the changes that it suggests, but you can take it seriously.
+Don't always assume that `golint` is 100% accurate, the issues that it finds are somewhat fuzzy and sometimes has false positives and false negatives. This means you don't have to make the changes that it suggests, but you can take it seriously.
 
 Install `golint` with:
 
@@ -133,4 +133,3 @@ Run it accross the project with:
 ```bash
 golint ./...
 ```
-
