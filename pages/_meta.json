@@ -6,7 +6,7 @@
     "theme": {
       "typesetting": "article",
       "breadcrumb": false,
-      "sidebar": true,
+      "sidebar": false,
       "pagination": false,
       "toc": false
     }
