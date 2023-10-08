@@ -11,11 +11,6 @@
       "toc": false
     }
   },
-  "docs": {
-    "title": "Documentation",
-    "type": "page",
-    "href": "/go/getting-started"
-  },
   "---": {
     "type": "separator",
     "title": "Programming Languages"
